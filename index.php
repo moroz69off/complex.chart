@@ -47,6 +47,9 @@
 				<div id="" class="col-4">
 					
 				</div>
+				<div id="" class="col-8">
+					
+				</div>
 			</div>
 		</div>
 		<script src="src/js/bootstrap-multiselect.js"></script>
