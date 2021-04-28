@@ -1,7 +1,19 @@
 'use strict'
-
+var orderCount = 0;
 $(document).ready(function() {
 	$('#t_chart-selectAllJustVisible').multiselect({
+		selectAll: function(option, checked, m_select) {
+			change_trigger(option, true);
+		},
+		
+		onChange: function(option, checked) {
+			if (checked) {
+				change_trigger(option, true);
+			}
+			else {
+				change_trigger(option, false);
+			}
+		},
 		maxHeight: 250,
 		buttonWidth: '183px',
 		enableFiltering: true,
@@ -10,12 +22,19 @@ $(document).ready(function() {
 	});
 });
 
+function change_trigger (option, checked) {
+	if (checked) {
+		console.log('true'+option);
+	} else
+	console.log('false'+option);
+} // dropdown-item multiselect-all active
+
 function re_set () {
 	t_chart.update();
 }
 
 // gets from API
-var /*const*/ time_labels = [
+var time_labels = [
 	'2020-03-12', // 1
 	'2020-03-13', // 2
 	'2020-03-14', // 3
