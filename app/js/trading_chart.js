@@ -2,10 +2,6 @@
 var orderCount = 0;
 $(document).ready(function() {
 	$('#t_chart-selectAllJustVisible').multiselect({
-		selectAll: function(option, checked, m_select) {
-			change_trigger(option, true);
-		},
-		
 		onChange: function(option, checked) {
 			if (checked) {
 				change_trigger(option, true);
@@ -106,8 +102,8 @@ var T_data = [
 	2.2,  // 15
 ];			   
 var chart_labels = [
-	//'First',
-	//'Second',
+	'First',
+	'Second',
 ];
 	   
 var data_set = [];
@@ -165,31 +161,31 @@ function generateDataSet () {
 		// borderWidth: 1
 		//}
 		//,
-		//{
-		//label: chart_labels[1],
-		//data: S_data,
-		//backgroundColor: [
-		//	'rgba(  255, 99, 132, 0.5)',
-		//	],
-		//	borderColor: [
-		//	'rgba( 255, 99, 132, 1)',
-		//	],
-		// borderWidth: 2
-		//}
-		//,
-		//{
+		{
+		label: chart_labels[1],
+		data: S_data,
+		backgroundColor: [
+			'rgba(  255, 99, 132, 0.5)',
+			],
+			borderColor: [
+			'rgba( 255, 99, 132, 1)',
+			],
+		 borderWidth: 2
+		}
+		,
+		{
 		
-		//label: chart_labels[2],
-		//data: T_data,
-		//backgroundColor: [
-		//	'rgba(  255, 99, 132, .1)',
-		//],
-		//borderColor: [
-		//	'rgba( 255, 99, 132, .9)',
-		//	],
-		//borderDash: [5, 5],
-		//borderWidth: 2
-		//}
+		label: chart_labels[2],
+		data: T_data,
+		backgroundColor: [
+			'rgba(  255, 99, 132, .1)',
+		],
+		borderColor: [
+			'rgba( 255, 99, 132, .9)',
+			],
+		borderDash: [5, 5],
+		borderWidth: 2
+		}
 	]
 	return data_set;
 }
