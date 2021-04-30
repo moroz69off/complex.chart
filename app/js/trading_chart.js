@@ -20,9 +20,12 @@ $(document).ready(function() {
 
 function change_trigger (option, checked) {
 	if (checked) {
+		orderCount++;
 		console.log('true' + option);
-	} else
-	console.log('false' + option);
+	} else{
+		orderCount--;
+		console.log('false' + option);
+	}
 } // dropdown-item multiselect-all active
 
 function re_set () {
