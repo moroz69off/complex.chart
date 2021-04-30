@@ -21,10 +21,10 @@ $(document).ready(function() {
 function change_trigger (option, checked) {
 	if (checked) {
 		orderCount++;
-		console.log('true' + option);
+		console.log(option[0].innerText + ' ' + orderCount);
 	} else{
 		orderCount--;
-		console.log('false' + option);
+		console.log(option[0].innerText + ' ' + orderCount);
 	}
 } // dropdown-item multiselect-all active
 
