@@ -20,9 +20,9 @@ $(document).ready(function() {
 
 function change_trigger (option, checked) {
 	if (checked) {
-		console.log('true'+option);
+		console.log('true' + option);
 	} else
-	console.log('false'+option);
+	console.log('false' + option);
 } // dropdown-item multiselect-all active
 
 function re_set () {
