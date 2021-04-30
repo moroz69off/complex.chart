@@ -1,5 +1,6 @@
 'use strict'
 var orderCount = 0;
+var orders = [];
 $(document).ready(function() {
 	$('#t_chart-selectAllJustVisible').multiselect({
 		onChange: function(option, checked) {
@@ -20,13 +21,24 @@ $(document).ready(function() {
 
 function change_trigger (option, checked) {
 	if (checked) {
+		orders.push(option[0].innerText);
 		orderCount++;
-		console.log(option[0].innerText + ' ' + orderCount);
+		console.log(orders);
 	} else{
+		removeItem(orders, option[0].innerText)
 		orderCount--;
-		console.log(option[0].innerText + ' ' + orderCount);
+		console.log(orders);
 	}
 } // dropdown-item multiselect-all active
+
+function removeItem(array, item){
+	for(var i in array){
+		if(array[i]==item){
+			array.splice(i, 1);
+			break;
+		}
+	}
+}
 
 function re_set () {
 	t_chart.update();
