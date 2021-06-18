@@ -83,38 +83,38 @@ var time_labels = [
 //	NaN,  // 15
 //];
 var S_data = [
-	2.4,  // 1 
-	1.3,  // 2 
-	2.2,  // 3 
-	2.6,  // 4 
-	2.4,  // 5 
-	3.4,  // 6 
-	2.7,  // 7 
-	2.1,  // 8 
-	2.2,  // 9 
-	2.0,  // 10
-	2.5,  // 11
-	NaN,  // 12
-	NaN,  // 13
-	NaN,  // 14
-	NaN,  // 15
+	2.4,
+	1.3,
+	2.2,
+	2.6,
+	2.4,
+	3.4,
+	2.7,
+	2.1,
+	2.2,
+	2.0,
+	2.5,
+	NaN,
+	NaN,
+	NaN,
+	NaN,
 ];
 var T_data = [
-	NaN,  // 1 
-	NaN,  // 2 
-	NaN,  // 3 
-	NaN,  // 4 
-	NaN,  // 5  
-	NaN,  // 6  
-	NaN,  // 7  
-	NaN,  // 8  
-	NaN,  // 9  
-	NaN,  // 10 
-	S_data[10],  // 11
-	2.5,  // 12
-	2.7,  // 13
-	2.5,  // 14
-	2.2,  // 15
+	NaN,
+	NaN,
+	NaN,
+	NaN,
+	NaN,
+	NaN,
+	NaN,
+	NaN,
+	NaN,
+	NaN,
+	S_data[10],
+	2.5,
+	2.7,
+	2.5,
+	2.2,
 ];			   
 var chart_labels = [
 	'First',
@@ -164,18 +164,6 @@ function add_set () {
 
 function generateDataSet () {
 	data_set = [
-		//{
-		//label: chart_labels[0],
-		//data: F_data,
-		//backgroundColor: [
-		//	'rgba(  155, 199, 232, 0.777)',
-		//	],
-		//	borderColor: [
-		//	'rgba( 155, 199, 232, 1)',
-		//	],
-		// borderWidth: 1
-		//}
-		//,
 		{
 		label: chart_labels[1],
 		data: S_data,
@@ -232,7 +220,7 @@ var t_chart = new Chart(ctx, {
 				
 				labels: {
 					usePointStyle: true,
-				  //pointStyle: 'star',
+					pointStyle: 'star',
 					color: 'rgb(0, 199, 232)'
 				},
 				text: 'Legend Title'
